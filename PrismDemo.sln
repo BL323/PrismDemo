@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDemo.UI", "..\PrismDemo.UI\PrismDemo.UI.csproj", "{8CE10287-CC96-45E9-A152-9016A85710AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDemo.Infrastructure", "..\PrismDemo.Infrastructure\PrismDemo.Infrastructure.csproj", "{2DDE308B-6457-4F90-9CF8-415FEDE6E935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDemo.Graphing", "..\PrismDemo.Graphing\PrismDemo.Graphing.csproj", "{4A79E3E2-0C85-4ADA-AB39-9D7B12208E53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDemo.Presentation", "..\PrismDemo.Presentation\PrismDemo.Presentation.csproj", "{FA038A85-66E1-4CCE-8910-9AB819C99AA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BD0AAF90-80A2-4B7A-91DE-66E38CA7D082}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDemo.Tasks", "..\PrismDemo.Tasks\PrismDemo.Tasks.csproj", "{5FF736C5-B9D9-479E-ABF1-7685D12F2D2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CE10287-CC96-45E9-A152-9016A85710AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE10287-CC96-45E9-A152-9016A85710AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE10287-CC96-45E9-A152-9016A85710AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE10287-CC96-45E9-A152-9016A85710AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDE308B-6457-4F90-9CF8-415FEDE6E935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDE308B-6457-4F90-9CF8-415FEDE6E935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDE308B-6457-4F90-9CF8-415FEDE6E935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDE308B-6457-4F90-9CF8-415FEDE6E935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A79E3E2-0C85-4ADA-AB39-9D7B12208E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A79E3E2-0C85-4ADA-AB39-9D7B12208E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A79E3E2-0C85-4ADA-AB39-9D7B12208E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A79E3E2-0C85-4ADA-AB39-9D7B12208E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA038A85-66E1-4CCE-8910-9AB819C99AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA038A85-66E1-4CCE-8910-9AB819C99AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA038A85-66E1-4CCE-8910-9AB819C99AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA038A85-66E1-4CCE-8910-9AB819C99AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF736C5-B9D9-479E-ABF1-7685D12F2D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF736C5-B9D9-479E-ABF1-7685D12F2D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF736C5-B9D9-479E-ABF1-7685D12F2D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF736C5-B9D9-479E-ABF1-7685D12F2D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
