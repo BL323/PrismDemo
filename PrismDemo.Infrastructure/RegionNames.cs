@@ -17,5 +17,10 @@ namespace PrismDemo.Infrastructure
         public static readonly string TaskListRegion = "TaskListRegion";
         public static readonly string TaskRegion = "TaskRegion";
 
+        //Graph Regions
+        public static readonly string GraphRegion = "GraphRegion";
+        public static readonly string PerturbationListRegion = "PerturbationListRegion";
+
+
     }
 }

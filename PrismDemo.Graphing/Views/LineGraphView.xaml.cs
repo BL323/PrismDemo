@@ -23,11 +23,9 @@ namespace PrismDemo.Graphing.Views
     /// </summary>
     public partial class LineGraphView : UserControl
     {
-        public LineGraphView(LinePlotViewModel viewModel)
+        public LineGraphView()
         {
             InitializeComponent();
-
-            this.DataContext = viewModel;
         }
     }
 }

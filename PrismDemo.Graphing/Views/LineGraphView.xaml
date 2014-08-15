@@ -13,7 +13,9 @@
                     Command="{Binding AddPerturbationsCommand}"/>
 
             <plotters:ChartPlotter DockPanel.Dock="Top" x:Name="plotter" Height="Auto" Width="Auto"
-                               LineGraphs="{Binding LinePerturbations}"/>
+                               LineGraphs="{Binding VisiblePerturbations, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <!--LineGraphs="{Binding VisiblePerturbations}"/>-->
+
         </DockPanel>
 
 

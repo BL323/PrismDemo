@@ -1,5 +1,8 @@
-﻿using Microsoft.Research.DynamicDataDisplay.Charts;
+﻿using Microsoft.Practices.Prism.PubSubEvents;
+using Microsoft.Practices.Unity;
+using Microsoft.Research.DynamicDataDisplay.Charts;
 using Microsoft.Research.DynamicDataDisplay.DataSources;
+using PrismDemo.Graphing.Events;
 using PrismDemo.Infrastructure;
 using PrismDemo.Infrastructure.Commands;
 using System;
@@ -8,6 +11,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -16,10 +20,14 @@ namespace PrismDemo.Graphing.ViewModels
     public class LinePlotViewModel : UpdateBase
     {
         #region Private Fields
+        private int _pertCount = 1;
         private HorizontalDateTimeAxis dateAxis;
         private CompositeDataSource editedDs;
         private ICommand _addPerturbationsCommand;
         private ObservableCollection<LinePerturbationViewModel> _linePerturbations = new ObservableCollection<LinePerturbationViewModel>();
+
+        private IUnityContainer _container = null;
+        private IEventAggregator _eventAggregator = null;
         #endregion
 
         #region Public Properties
@@ -42,11 +50,23 @@ namespace PrismDemo.Graphing.ViewModels
                 }
             }
         }
+        public ObservableCollection<LinePerturbationViewModel> VisiblePerturbations
+        {
+            get
+            {
+                var res = LinePerturbations.Where(x => x.IsVisible);
+                return new ObservableCollection<LinePerturbationViewModel>(res);
+            }
+        }
         #endregion
 
         #region Constructor
-        public LinePlotViewModel()
+        public LinePlotViewModel(IUnityContainer container)
         {
+            _container = container;
+            _eventAggregator = _container.Resolve<IEventAggregator>();
+
+            _eventAggregator.GetEvent<PerturbationsUpdatedEvent>().Subscribe(RefreshLineGraphs, true);
         }
         #endregion
 
@@ -90,10 +110,10 @@ namespace PrismDemo.Graphing.ViewModels
             this.dateAxis = new HorizontalDateTimeAxis();
             ys.SetXMapping(dateAxis.ConvertToDouble);
             CompositeDataSource ds = new CompositeDataSource(xs, ys);
-            LinePerturbationViewModel lineGraphViewModel = new LinePerturbationViewModel();
+            LinePerturbationViewModel lineGraphViewModel = new LinePerturbationViewModel(_container);
             lineGraphViewModel.PointDataSource = ds;
             this.editedDs = ds;
-            lineGraphViewModel.Name = "Test1";
+            lineGraphViewModel.Name = string.Format("Test{0}", _pertCount++);
             lineGraphViewModel.Color = Color.FromRgb(255, 0, 0);
             lineGraphViewModel.EntityId = Guid.NewGuid();
             lineGraphViewModel.LineAndMarker = false;
@@ -106,14 +126,19 @@ namespace PrismDemo.Graphing.ViewModels
             ys1.SetXMapping(dateAxis.ConvertToDouble);
             CompositeDataSource ds1 = new CompositeDataSource(xs1, ys1);
 
-            lineGraphViewModel = new LinePerturbationViewModel();
+            lineGraphViewModel = new LinePerturbationViewModel(_container);
             lineGraphViewModel.PointDataSource = ds1;
-            lineGraphViewModel.Name = "Test2";
+            lineGraphViewModel.Name = string.Format("Test{0}", _pertCount++);
             lineGraphViewModel.Color = Color.FromRgb(0, 0, 255);
             lineGraphViewModel.EntityId = Guid.NewGuid();
             lineGraphViewModel.LineAndMarker = true;
             lineGraphViewModel.Thickness = 1;
             this.LinePerturbations.Add(lineGraphViewModel);
+        }
+        private void RefreshLineGraphs(LinePerturbationViewModel viewModel)
+        {
+            RaisePropertyChanged(() => LinePerturbations);
+            RaisePropertyChanged(() => VisiblePerturbations);
         }
         #endregion
 

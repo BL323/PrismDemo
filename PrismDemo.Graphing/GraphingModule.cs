@@ -27,7 +27,11 @@ namespace PrismDemo.Graphing
             _controller = _container.Resolve<GraphingController>();
 
             var regionManager = _container.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion(RegionNames.BodyRegion, typeof(LineGraphView));
+            regionManager.RegisterViewWithRegion(RegionNames.BodyRegion, typeof(GraphingShell));
+            regionManager.RegisterViewWithRegion(RegionNames.GraphRegion, typeof(LineGraphView));
+            regionManager.RegisterViewWithRegion(RegionNames.PerturbationListRegion, typeof(PerturbationList));
+
+
         }
     }
 }

@@ -82,14 +82,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\PerturbationsUpdatedEvent.cs" />
     <Compile Include="GraphingController.cs" />
     <Compile Include="GraphingModule.cs" />
     <Compile Include="Plotters\ChartPlotter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LinePerturbationViewModel.cs" />
     <Compile Include="ViewModels\LinePlotViewModel.cs" />
+    <Compile Include="Views\GraphingShell.xaml.cs">
+      <DependentUpon>GraphingShell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LineGraphView.xaml.cs">
       <DependentUpon>LineGraphView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PerturbationList.xaml.cs">
+      <DependentUpon>PerturbationList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PerturbationListItem.xaml.cs">
+      <DependentUpon>PerturbationListItem.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +112,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\GraphingShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LineGraphView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PerturbationList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PerturbationListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

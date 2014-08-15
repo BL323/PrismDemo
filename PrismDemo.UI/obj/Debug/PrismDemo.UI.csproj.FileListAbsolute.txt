@@ -97,3 +97,5 @@ C:\Users\Ben\Desktop\PrismDemo\PrismDemo.UI\bin\Debug\PrismDemo.Infrastructure.p
 C:\Users\Ben\Desktop\PrismDemo\PrismDemo.UI\bin\Debug\DynamicDataDisplay.dll
 C:\Users\Ben\Desktop\PrismDemo\PrismDemo.UI\bin\Debug\PrismDemo.Tasks.dll
 C:\Users\Ben\Desktop\PrismDemo\PrismDemo.UI\bin\Debug\PrismDemo.Tasks.pdb
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.UI\bin\Debug\PrismDemo.User.dll
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.UI\bin\Debug\PrismDemo.User.pdb

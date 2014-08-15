@@ -2,6 +2,7 @@
 using Microsoft.Practices.Unity;
 using PrismDemo.Infrastructure;
 using PrismDemo.Tasks.Events;
+using PrismDemo.Tasks.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -58,26 +59,9 @@ namespace PrismDemo.Tasks.ViewModels
         #region Private Methods
         private void AddTask()
         {
-            Tasks.Add(new TaskViewModel()
-            {
-                Title = "Task 1",
-                Description = "Description for task 1",
-                Priority = 1
-            });
-
-            Tasks.Add(new TaskViewModel()
-            {
-                Title = "Task 2",
-                Description = "Description for task 2",
-                Priority = 3
-            });
-
-            Tasks.Add(new TaskViewModel()
-            {
-                Title = "Task 3",
-                Description = "Description for task 3",
-                Priority = 1
-            });
+            //Call to ITaskService        
+            var taskService = _container.Resolve<ITaskService>();
+            Tasks = new ObservableCollection<TaskViewModel>(taskService.GetTasks());
         }
         private void UpdateTask()
         {

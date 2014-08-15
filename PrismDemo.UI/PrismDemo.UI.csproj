@@ -154,6 +154,10 @@
       <Project>{5ff736c5-b9d9-479e-abf1-7685d12f2d2f}</Project>
       <Name>PrismDemo.Tasks</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PrismDemo.User\PrismDemo.User.csproj">
+      <Project>{32386dc1-8e44-4ec4-a8a8-6373cb120119}</Project>
+      <Name>PrismDemo.User</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

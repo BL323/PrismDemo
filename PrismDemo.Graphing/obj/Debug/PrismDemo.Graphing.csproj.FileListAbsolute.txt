@@ -44,3 +44,9 @@ C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\bin\Debug\PrismDemo.Infrastruc
 C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\bin\Debug\DynamicDataDisplay.dll
 C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\PrismDemo.Graphing_MarkupCompile.lref
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\Views\GraphingShell.g.cs
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\Views\GraphingShell.baml
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\Views\PerturbationListItem.baml
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\Views\PerturbationList.g.cs
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\Views\PerturbationListItem.g.cs
+C:\Users\Ben\Desktop\PrismDemo\PrismDemo.Graphing\obj\Debug\Views\PerturbationList.baml

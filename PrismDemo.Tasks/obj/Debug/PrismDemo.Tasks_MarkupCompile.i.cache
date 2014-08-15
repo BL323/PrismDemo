@@ -16,5 +16,5 @@ DEBUG;TRACE
 241816582521
 Views\TaskListItemView.xaml;Views\TaskShellView.xaml;Views\TasksListView.xaml;
 
-True
+False
 

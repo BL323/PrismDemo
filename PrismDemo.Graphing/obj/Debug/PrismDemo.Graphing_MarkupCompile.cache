@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-1135321967
+489769985
 
-71564401011
+11-193703333
 75489119023
-Views\LineGraphView.xaml;
+Views\GraphingShell.xaml;Views\LineGraphView.xaml;Views\PerturbationList.xaml;Views\PerturbationListItem.xaml;
 
 False
 

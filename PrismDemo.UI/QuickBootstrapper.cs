@@ -3,6 +3,9 @@ using Microsoft.Practices.Prism.UnityExtensions;
 using PrismDemo.Graphing;
 using PrismDemo.Presentation;
 using PrismDemo.Tasks;
+using PrismDemo.Tasks.Services;
+using PrismDemo.User;
+using PrismDemo.User.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,11 +40,22 @@ namespace PrismDemo.UI
             var graphingModule = typeof(GraphingModule);
             moduleCatalog.AddModule(new ModuleInfo() { ModuleName = graphingModule.Name, ModuleType = graphingModule.AssemblyQualifiedName });
 
-
             var tasksModule = typeof(TasksModule);
             moduleCatalog.AddModule(new ModuleInfo() { ModuleName = tasksModule.Name, ModuleType = tasksModule.AssemblyQualifiedName });
 
+            var userModule = typeof(UserModule);
+            moduleCatalog.AddModule(new ModuleInfo() { ModuleName = userModule.Name, ModuleType = userModule.AssemblyQualifiedName });
+
             return moduleCatalog;
+        }
+
+        protected override void ConfigureContainer()
+        {
+            base.ConfigureContainer();
+
+            //Register services
+            RegisterTypeIfMissing(typeof(ITaskService), typeof(TaskService), true);
+            RegisterTypeIfMissing(typeof(IUserService), typeof(UserService), true);
         }
     }
 }

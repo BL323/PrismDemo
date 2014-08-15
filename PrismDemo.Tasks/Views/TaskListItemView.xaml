@@ -7,11 +7,11 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Border BorderBrush="SteelBlue" BorderThickness="2">
-            <StackPanel Orientation="Vertical" Background="Purple">
-                <TextBlock Text="{Binding Title}" Foreground="White"/>
-                <TextBlock Text="{Binding Description}" Foreground="White"/>
-                <TextBlock Text="{Binding Priority}" Foreground="White"/>
-                <TextBlock Text="{Binding Id, Mode=OneWay}" Foreground="White"/>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="{Binding Title}" Foreground="Black"/>
+                <TextBlock Text="{Binding Description}" Foreground="Black"/>
+                <TextBlock Text="{Binding Priority}" Foreground="Black"/>
+                <TextBlock Text="{Binding Id, Mode=OneWay}" Foreground="Black"/>
 
             </StackPanel>
         </Border>
